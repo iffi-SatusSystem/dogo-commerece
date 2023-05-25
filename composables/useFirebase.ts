@@ -11,6 +11,7 @@ export const createUser= async (email: string, password: string) =>{
         const errorMessage = error.message;
         // ..
       });
+      return credentials
 }
 //Sign in user
 export const signinUser=async (email: string, password: string) => {
@@ -20,6 +21,7 @@ export const signinUser=async (email: string, password: string) => {
     const errorCode = error.code;
     const errorMessage = error.message;
   });
+  return credentials
 }
 //Init user
 export const initUser=async () => {
