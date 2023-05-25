@@ -1,10 +1,11 @@
 import {initializeApp}from "firebase/app"
-
 export default defineNuxtPlugin( nuxtApp =>{
+const config= useRuntimeConfig()
+// console.log(config.public.firebaseApiKey);
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBjz6LQZdEKx6FLzFHJwGKxgFd1h42f1Bk",
+    apiKey: config.public.firebaseApiKey,
     authDomain: "dojo-commerece.firebaseapp.com",
     projectId: "dojo-commerece",
     storageBucket: "dojo-commerece.appspot.com",
@@ -13,6 +14,6 @@ const firebaseConfig = {
   };
 
     const app= initializeApp(firebaseConfig)
-    console.log(app);
+    // console.log(app);
 
 })
