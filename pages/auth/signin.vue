@@ -40,6 +40,7 @@
     </v-app>
 </template>
 <script setup>
+    const router= useRouter()
     const valid = ref(false)
     const email =ref("")
     const password = ref("")
@@ -59,6 +60,11 @@
          v => /.{8,32}/.test(v) || "Password must be shorter than 32 characters"      
     ]);
     const login= () =>{
-
+        const result=signinUser(email.value,password.value)
+        if(!!result){
+            router.push("/")
+        }else{
+            alert("Enter valid Credentials")
+        }
     }
 </script>
