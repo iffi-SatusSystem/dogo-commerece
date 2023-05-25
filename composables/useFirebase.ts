@@ -4,7 +4,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 
 //Create USer
 export const createUser= async (email: string, password: string) =>{
-    const auth = getAuth();
+   const auth = getAuth();
    const credentials= await createUserWithEmailAndPassword(auth, email, password)
       .catch((error) => {
         const errorCode = error.code;
@@ -38,7 +38,12 @@ export const initUser=async () => {
         }
       });
 }
-
+//Signout User
+export const signoutUser= async () => {
+  const auth= getAuth()
+  const result= await auth.signOut()
+  return result
+}
 
 
   

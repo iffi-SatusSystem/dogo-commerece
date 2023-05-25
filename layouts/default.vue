@@ -46,7 +46,23 @@
             name:"Products",
             link:"/products"
         }
-    ])
+    ]);
+     // const email= "abc@gmail.com"
+  // const password= "ifffi1234"
+  // const credentials=await createUser(email, password)
+  // console.log(credentials);
+//   onMounted(async () => {
+//     // const email= "abc@gmail.com"
+//     // const password= "ifffi1234"
+//     // const credentials =  signinUser(email, password)
+//     // console.log(credentials);
+//     const email= "abcd@gmail.com"
+//     const password= "ifffi1234"
+//     const credentials=await createUser(email, password)
+//   console.log(credentials);
+//     const result = await signoutUser()
+//     console.log(result);
+//   })
 </script>
 <style lang="">
     
