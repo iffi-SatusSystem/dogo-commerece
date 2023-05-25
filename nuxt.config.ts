@@ -40,7 +40,7 @@ export default defineNuxtConfig({
       runtimeConfig:{
         public:{
           firebaseApiKey: process.env.FIREBASE_API_KEY,
-          currencyKey: process.env.CURRENCY_API_KEY,
+          // currencyKey: process.env.CURRENCY_API_KEY,
         }
       },
 
