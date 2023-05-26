@@ -79,9 +79,10 @@
     </v-app>
 </template>
 <script setup>
+
     const router= useRouter(); 
     const firebaseUser= useFirebaseUser()
-   const  user=ref({
+    const  user=ref({
         initials: 'JD',
         fullName: 'John Doe',
         email: 'john.doe@doe.com',

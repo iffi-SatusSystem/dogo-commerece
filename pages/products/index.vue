@@ -14,7 +14,8 @@
 <script setup>
 
 definePageMeta({
-    layout:"products"
+    layout:"products",
+   
 });
 useHead({
   title: "DOGO Merch",

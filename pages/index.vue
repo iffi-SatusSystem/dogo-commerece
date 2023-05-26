@@ -6,7 +6,9 @@
         </v-main>
 </template>
 <script setup>
- 
+ definePageMeta({
+  layout: "default"
+ })
 </script>
 <style >
 

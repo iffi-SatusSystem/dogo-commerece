@@ -36,7 +36,7 @@ export default defineNuxtConfig({
           autoImport: true,
         }
       },
-
+     
       runtimeConfig:{
         public:{
           firebaseApiKey: process.env.FIREBASE_API_KEY,
