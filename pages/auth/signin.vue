@@ -1,6 +1,6 @@
 <template>
     <v-app>
-      <v-form v-model="valid">
+      <v-form @submit.prevent="login" @keyup.enter.prevent="login" v-model="valid">
         <v-container>
           <v-row>
             <v-col

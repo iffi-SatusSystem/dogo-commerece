@@ -26,16 +26,21 @@ export const signinUser=async (email: string, password: string) => {
 //Init user
 export const initUser=async () => {
     const auth= getAuth();
+    const firebaseUser =useFirebaseUser()
+    firebaseUser.value=auth.currentUser
     onAuthStateChanged(auth, (user) => {
         if (user) {
           // User is signed in, see docs for a list of available properties
           // https://firebase.google.com/docs/reference/js/auth.user
           const uid = user.uid;
+          console.log(user,uid);
           // ...
         } else {
           // User is signed out
           // ...
+          console.log(user);
         }
+        firebaseUser.value=user;
       });
 }
 //Signout User

@@ -1,6 +1,6 @@
 <template >
     <v-app>
-        <v-app-bar flat>
+        <v-app-bar flat v-if="firebaseUser">
       <v-container class="d-flex align-center">
         <v-app-bar-title class="text-green-accent-2" text="Dogo Merchant">
 
@@ -79,7 +79,8 @@
     </v-app>
 </template>
 <script setup>
-    const router= useRouter();  
+    const router= useRouter(); 
+    const firebaseUser= useFirebaseUser()
    const  user=ref({
         initials: 'JD',
         fullName: 'John Doe',
